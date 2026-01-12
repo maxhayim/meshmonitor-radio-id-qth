@@ -1,5 +1,3 @@
-# 📟 Radio Identity + QTH
-
 <p align="center">
   <a href="https://www.python.org/">
     <img src="https://img.shields.io/badge/Python-3.8%2B-blue" alt="Python Version">
@@ -8,6 +6,8 @@
     <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
   </a>
 </p>
+
+# 📟 Radio Identity + QTH
 
 Radio Identity and QTH responder Script for [**MeshMonitor**](https://github.com/Yeraze/MeshMonitor) , supporting **Ham, GMRS, CB, and Club** meshes.
 
@@ -147,4 +147,7 @@ MIT License
 ## Acknowledgments
 
 * MeshMonitor built by [Yeraze](https://github.com/Yeraze) 
-* Shout out to [South Dade GMRS Club](https://www.southdadegmrs.com/) 
+* Shout out to [South Dade GMRS Club](https://www.southdadegmrs.com/)
+
+Discover other community-contributed Auto Responder scripts for MeshMonitor [here](https://meshmonitor.org/user-scripts.html).
+
