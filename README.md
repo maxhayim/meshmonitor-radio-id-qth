@@ -1,6 +1,15 @@
-# meshmonitor-radio-id-qth
+# 📟 Radio Identity + QTH
 
-Radio Identity and QTH responder for **MeshMonitor**, supporting **Ham, GMRS, CB, and Club** meshes.
+<p align="center">
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/Python-3.8%2B-blue" alt="Python Version">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-green" alt="License">
+  </a>
+</p>
+
+Radio Identity and QTH responder Script for [**MeshMonitor**](https://github.com/Yeraze/MeshMonitor) , supporting **Ham, GMRS, CB, and Club** meshes.
 
 This repository contains:
 - **mm_radio_id_qth.py** — the actual MeshMonitor Auto Responder script (runtime)
@@ -108,13 +117,24 @@ Script path:
 
 ---
 
+## Example Triggers
+
+```
+!id ham <CALLSIGN>
+!id gmrs <CALLSIGN[-UNIT]>
+!id cb <HANDLE>
+!id club <CLUB_OR_ROLE>
+!qth
+```
+---
+
 ## Example usage
 
 ```
 !id ham W1ABC
-!id gmrs WRUV246-2
-!id cb MaxOffRoadin
-!id club RELAY-3
+!id gmrs WIBV123
+!id cb Wanderer
+!id club WanderClub
 !qth
 ```
 
@@ -122,4 +142,9 @@ Script path:
 
 ## License
 
-MIT
+MIT License
+
+## Acknowledgments
+
+* MeshMonitor built by [Yeraze](https://github.com/Yeraze) 
+* Shout out to [South Dade GMRS Club](https://www.southdadegmrs.com/) 
