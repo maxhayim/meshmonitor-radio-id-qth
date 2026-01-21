@@ -9,7 +9,7 @@
 
 # 📟 Radio Identity + QTH
 
-Radio Identity and QTH responder Script for [**MeshMonitor**](https://github.com/Yeraze/MeshMonitor) , supporting **Ham, GMRS, CB, and Club** meshes.
+Radio Identity and QTH responder Script for [**MeshMonitor**](https://github.com/Yeraze/MeshMonitor), supporting **Ham, GMRS, CB, and Club** meshes.
 
 This repository contains:
 - **mm_radio_id_qth.py** — the actual MeshMonitor Auto Responder script (runtime)
@@ -42,30 +42,26 @@ Design goals:
 
 ## Repository layout
 
-```
 .
 ├── mm_radio_id_qth.py      # Runtime script used by MeshMonitor
 ├── docs/                  # GitHub Pages documentation
 │   ├── index.html
 │   └── index.js
 └── README.md
-```
 
 ---
 
 ## IMPORTANT: Which file do I use?
 
 ### Use this file in MeshMonitor
-```
+
 mm_radio_id_qth.py
-```
 
 This is the **only file** MeshMonitor should execute.
 
 ### Do NOT run this file
-```
+
 docs/index.js
-```
 
 `index.js` only displays the script on a web page.
 
@@ -75,15 +71,11 @@ docs/index.js
 
 The script must exist inside the MeshMonitor environment at:
 
-```
 /data/scripts/mm_radio_id_qth.py
-```
 
 Make it executable:
 
-```bash
 chmod +x mm_radio_id_qth.py
-```
 
 ---
 
@@ -92,51 +84,106 @@ chmod +x mm_radio_id_qth.py
 Create two Auto Responder rules.
 
 ### Rule 1 — Identity registration
+
 Trigger regex:
-```
 ^!id\s+(ham|gmrs|cb|club)\s+(.+)$
-```
 
 Action: Script  
 Script path:
-```
 /data/scripts/mm_radio_id_qth.py
-```
 
 ### Rule 2 — QTH response
+
 Trigger regex:
-```
 ^!qth$
-```
 
 Action: Script  
 Script path:
-```
 /data/scripts/mm_radio_id_qth.py
-```
 
 ---
 
 ## Example Triggers
 
-```
-!id ham <CALLSIGN>
-!id gmrs <CALLSIGN[-UNIT]>
-!id cb <HANDLE>
-!id club <CLUB_OR_ROLE>
+!id ham <CALLSIGN>  
+!id gmrs <CALLSIGN[-UNIT]>  
+!id cb <HANDLE>  
+!id club <CLUB_OR_ROLE>  
 !qth
-```
+
 ---
 
 ## Example usage
 
-```
-!id ham W1ABC
-!id gmrs WIBV123
-!id cb Wanderer
-!id club WanderClub
+!id ham W1ABC  
+!id gmrs WIBV123  
+!id cb Wanderer  
+!id club WanderClub  
 !qth
-```
+
+---
+
+## Maintenance / Reinstall (Advanced)
+
+These steps are **only required** if you are:
+- Upgrading to a newer version of the script
+- Troubleshooting unexpected behavior
+- Resetting stored identities
+
+This is **not required** for normal operation.
+
+---
+
+### Disable Radio Identity + QTH Auto Responder in MeshMonitor
+
+1. Open **MeshMonitor**
+2. Go to **Info → Automation**
+3. Under **Auto Responder**:
+   - Disable any rules pointing to `mm_radio_id_qth.py`
+4. (Optional) Remove Auto Responder rules for:
+   - `^!id\s+(ham|gmrs|cb|club)\s+(.+)$`
+   - `^!qth$`
+5. Click **Save**
+
+---
+
+### Remove script and stored state (inside container)
+
+Enter the MeshMonitor container:
+
+docker exec -it meshmonitor sh
+
+Remove the Radio Identity + QTH script:
+
+rm -f /data/scripts/mm_radio_id_qth.py
+
+Remove the stored identity database (this resets all saved identities):
+
+rm -f /data/scripts/mm_radio_id_db.json
+
+Exit the container:
+
+exit
+
+---
+
+### Reinstall Radio Identity + QTH Script
+
+1. Copy the updated `mm_radio_id_qth.py` back into:
+
+/data/scripts/mm_radio_id_qth.py
+
+2. Make the script executable:
+
+chmod +x /data/scripts/mm_radio_id_qth.py
+
+3. Recreate or re-enable the Auto Responder rules:
+   - `^!id\s+(ham|gmrs|cb|club)\s+(.+)$`
+   - `^!qth$`
+
+4. Click **Save** in MeshMonitor
+
+The script will automatically recreate its state file as users register identities.
 
 ---
 
@@ -146,8 +193,8 @@ MIT License
 
 ## Acknowledgments
 
-* MeshMonitor built by [Yeraze](https://github.com/Yeraze) 
+* MeshMonitor built by [Yeraze](https://github.com/Yeraze)
 * Shout out to [South Dade GMRS Club](https://www.southdadegmrs.com/)
 
-Discover other community-contributed Auto Responder scripts for MeshMonitor [here](https://meshmonitor.org/user-scripts.html).
-
+Discover other community-contributed Auto Responder scripts for MeshMonitor  
+https://meshmonitor.org/user-scripts.html
