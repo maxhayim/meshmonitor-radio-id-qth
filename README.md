@@ -41,14 +41,13 @@ Design goals:
 ---
 
 ## Repository layout
-
-.
+<pre>
 ├── mm_radio_id_qth.py      # Runtime script used by MeshMonitor
 ├── docs/                  # GitHub Pages documentation
 │   ├── index.html
 │   └── index.js
 └── README.md
-
+</pre>
 ---
 
 ## IMPORTANT: Which file do I use?
