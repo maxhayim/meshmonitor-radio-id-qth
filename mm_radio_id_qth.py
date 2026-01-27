@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# mm_meta:
+#   name: Radio Identity + QTH
+#   emoji: 📟
+#   language: Python
+__version__ = "1.1.0"
+
 """
 Radio Identity + QTH responder for MeshMonitor (Ham / GMRS / CB / Club)
 
