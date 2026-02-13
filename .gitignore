@@ -1,0 +1,58 @@
+# ------------------------------
+# Python
+# ------------------------------
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------
+# Project-specific
+# ------------------------------
+
+# Local test copies of script
+mm_radio_id_qth.local.py
+
+# Local development DB (if created outside container)
+mm_radio_id_db.json
+
+# Docker overrides
+docker-compose.override.yml
+
+# Temporary files
+*.tmp
+*.bak
+
+# Node (for docs/ if using npm locally)
+node_modules/
+package-lock.json
+yarn.lock
+
+# GitHub Pages build artifacts (if ever generated locally)
+_site/
