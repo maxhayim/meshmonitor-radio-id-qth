@@ -188,7 +188,12 @@ The script will automatically recreate its state file as users register identiti
 
 ## License
 
-MIT License
+This project is licensed under the MIT License.
+
+See the [LICENSE](LICENSE) file for details.  
+Full license text: https://opensource.org/licenses/MIT
+
+---
 
 ## Acknowledgments
 
