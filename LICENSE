@@ -28,14 +28,15 @@ Third-Party Acknowledgments
 
 Radio Identity + QTH is an independent, open-source MeshMonitor Auto Responder script designed to integrate with:
 
-- MeshMonitor (by Yeraze)  
-- Meshtastic (open-source LoRa mesh networking platform)  
-- Ham Radio operators (FCC Amateur Radio Service)  
-- GMRS operators (FCC Part 95E)  
-- CB Radio operators (FCC Part 95D)  
-- Local radio clubs and mesh groups  
+- MeshMonitor (by Yeraze)
+- Meshtastic (open-source LoRa mesh networking platform)
+- MeshCore (open-source LoRa mesh networking platform)
+- Ham Radio operators (FCC Amateur Radio Service)
+- GMRS operators (FCC Part 95E)
+- CB Radio operators (FCC Part 95D)
+- Local radio clubs and mesh groups
 
 This project operates entirely within the MeshMonitor Auto Responder framework and relies only on locally provided MeshMonitor environment variables (such as node ID and GPS coordinates). It does not scrape external services, rebroadcast proprietary data, or distribute shared credentials.
 
-All trademarks, logos, and brand names are the property of their respective owners.  
-Radio Identity + QTH is not affiliated with, endorsed by, or officially connected to MeshMonitor, Meshtastic, the FCC, or any referenced radio service, organization, or platform.
+All trademarks, logos, and brand names are the property of their respective owners.
+Radio Identity + QTH is not affiliated with, endorsed by, or officially connected to MeshMonitor, Meshtastic, MeshCore, the FCC, or any referenced radio service, organization, or platform.

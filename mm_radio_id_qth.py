@@ -3,7 +3,7 @@
 #   name: Radio Identity + QTH
 #   emoji: 📟
 #   language: Python
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 
 """
 Radio Identity + QTH responder for MeshMonitor (Ham / GMRS / CB / Club)
@@ -107,8 +107,8 @@ def maidenhead(lat, lon):
     lon = max(min(lon, 180.0), -180.0) + 180.0
 
     A = ord("A")
-    field_lon = int(lon // 20)
-    field_lat = int(lat // 10)
+    field_lon = min(int(lon // 20), 17)
+    field_lat = min(int(lat // 10), 17)
     square_lon = int((lon % 20) // 2)
     square_lat = int((lat % 10) // 1)
     sub_lon = int(((lon % 2) / 2) * 24)

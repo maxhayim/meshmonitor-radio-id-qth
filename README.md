@@ -13,7 +13,7 @@
 
 # 📟 Radio Identity + QTH
 
-Radio Identity and QTH responder Script for [**MeshMonitor**](https://github.com/Yeraze/MeshMonitor), supporting **Ham, GMRS, CB, and Club** meshes over [**Meshstatic**](https://meshtastic.org/).
+Radio Identity and QTH responder Script for [**MeshMonitor**](https://github.com/Yeraze/MeshMonitor), supporting **Ham, GMRS, CB, and Club** meshes over [**Meshtastic**](https://meshtastic.org/), [**MeshCore**](https://meshcore.co.uk/), or any other mesh network MeshMonitor supports.
 
 This repository contains:
 - **mm_radio_id_qth.py** — the actual MeshMonitor Auto Responder script (runtime)
